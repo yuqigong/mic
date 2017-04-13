@@ -1,0 +1,189 @@
+.miui-calendar {
+  overflow: hidden;
+  text-align: center;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 999;
+  background: #fff;
+  -webkit-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+.miui-calendar.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.miui-headContainer {
+  background: transparent;
+  color: rgba(0,0,0,0.9);
+  fill: rgba(0,0,0,0.9);
+  height: 28px;
+  line-height: 28px;
+  text-align: left;
+  position: relative;
+  user-select: none;
+  border-top: 1px solid #e6e6e6;
+}
+.miui-prev-year,
+.miui-next-year,
+.miui-prev-month,
+.miui-next-month {
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 28px;
+  width: 40px;
+}
+.miui-prev-year i,
+.miui-next-year i,
+.miui-prev-month i,
+.miui-next-month i {
+  position: relative;
+}
+.miui-prev-month:hover,
+.miui-next-month:hover {
+  color: #12C286;
+}
+.miui-prev-month:hover svg,
+.miui-next-month:hover svg {
+  fill: #12C286;
+}
+.miui-prev-year svg,
+.miui-next-year svg,
+.miui-prev-month svg,
+.miui-next-month svg {
+  width: 14px;
+}
+.miui-prev-year svg path,
+.miui-next-year svg path,
+.miui-prev-month svg path,
+.miui-next-month svg path {
+  transition: fill 0.1s;
+  fill: inherit;
+}
+.miui-current-year,
+.miui-current-month {
+  font-size: 135%;
+  line-height: inherit;
+  font-weight: 300;
+  color: inherit;
+  width: 50%;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  text-align: center;
+}
+.miui-current-year span.cur-year,
+.miui-current-month span.cur-month {
+  font-family: inherit;
+  color: inherit;
+  display: inline-block;
+  margin-left: 7px;
+  padding: 0;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.miui-bodyContainer {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.miui-weekdays {
+  background: transparent;
+  text-align: center;
+  overflow: hidden;
+}
+.miui-days {
+  padding: 0;
+  outline: 0;
+  text-align: left;
+  padding: 1px 0 0 0;
+  border-right: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.miui-day {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 150px;
+  box-sizing: border-box;
+  color: #404848;
+  cursor: pointer;
+  font-weight: 400;
+  width: 14.2857143%;
+  flex-basis: 14.2857143%;
+  max-width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+}
+.miui-day.today {
+  border-color: #12C286;
+}
+.miui-day.selected {
+  background: #12C286;
+  color: #fff;
+  border-color: #12C286;
+}
+.miui-day.prevMonthDay,
+.miui-day.nextMonthDay {
+  color: rgba(0,0,0,0.15);
+  background: transparent;
+  border-color: #e9e9e9;
+  cursor: default;
+}
+span.miui-weekday {
+  cursor: default;
+  font-size: 90%;
+  color: rgba(117,117,117,0.54);
+  height: 27.333333333333332px;
+  line-height: 24px;
+  margin: 0;
+  background: transparent;
+  text-align: center;
+  display: block;
+  float: left;
+  width: 14.28%;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 3.333333333333333px;
+}
+span.miui-day {
+  border-radius: 0 !important;
+  border: 1px solid #e9e9e9;
+  margin: -1px 0 0 -1px;
+  max-width: none;
+  flex-basis: calc(14.28571% + 1px);
+  width: calc(14.28571% + 1px);
+}
+span.miui-day:nth-child(7n) {
+  border-right: 0;
+}
+span.miui-day:nth-child(n+36) {
+  border-bottom: 0;
+}
+span.miui-day.today:not(.selected) {
+  border-color: #e9e9e9;
+  border-bottom-color: #12C286;
+}
+span.miui-day.today:not(.selected):hover {
+  border-color: #f64747;
+}
+span.miui-day.today,
+span.miui-day.selected {
+  z-index: 2;
+}
