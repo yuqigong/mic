@@ -8,7 +8,6 @@ import { LazyLoad as LazyLoad } from '../components/index';
 import routes from './routes.js';
 // FastClick.attach(document.body);
 
-
 Vue.use(VueRouter);
 Vue.use(LazyLoad, {
     loading: require('../components/lazy-load/loading.svg'),
@@ -16,7 +15,7 @@ Vue.use(LazyLoad, {
 })
 
 const router = new VueRouter({
-    mode: 'history',
+    // mode: 'history',
     routes
 });
 
