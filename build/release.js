@@ -18,7 +18,7 @@ webpack(merge(baseConf, {
     externals: {
         "vue": "vue"
     },
-    devtool: '#source-map',
+    devtool: '#cheap-module-source-map',
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {
