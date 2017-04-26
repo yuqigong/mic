@@ -88,7 +88,11 @@ webpack({
             }
         }),
         new webpack.LoaderOptionsPlugin({
-            minimize: true
+            minimize: true,
+            vue: {
+                // use custom postcss plugins
+                postcss: [require('autoprefixer')()]
+            }
         }),
         new ExtractTextPlugin('style.[contenthash:8].css')
     ]

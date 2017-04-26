@@ -5,13 +5,13 @@ const base = {
     module: {
         rules: [{
             test: /\.js$/,
-            exclude: /(node_modules|bower_components)/,
+            exclude: /node_modules/,
             use: {
                 loader: 'babel-loader'
             }
         }, {
             test: /\.vue$/,
-            exclude: /(node_modules|bower_components)/,
+            exclude: /node_modules/,
             use: {
                 loader: 'vue-loader',
                 options: {
@@ -22,11 +22,11 @@ const base = {
             }
         }, {
             test: /\.css$/,
-            exclude: /(node_modules|bower_components)/,
+            exclude: /node_modules/,
             use: ['style-loader', 'css-loader']
         }, {
-            test: /\.(scss|sass)$/,
-            exclude: /(node_modules|bower_components)/,
+            test: /\.(scss|sass|less|styl)$/,
+            exclude: /node_modules/,
             use: ['style-loader', 'css-loader', 'sass-loader']
         }, {
             test: /\.(png|jpg|gif|svg)$/,
