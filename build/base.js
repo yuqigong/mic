@@ -25,7 +25,7 @@ const base = {
             exclude: /node_modules/,
             use: ['style-loader', 'css-loader']
         }, {
-            test: /\.(scss|sass|less|styl)$/,
+            test: /\.(scss|sass)$/,
             exclude: /node_modules/,
             use: ['style-loader', 'css-loader', 'sass-loader']
         }, {

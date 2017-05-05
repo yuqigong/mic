@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import wpconfig from './dev';
+import opn from 'opn';
 
 const port = process.env.PORT || 8080;
 
@@ -25,4 +26,5 @@ new WebpackDevServer(webpack(wpconfig), {
     }
 
     console.log('Listening at PORT:' + port);
+    opn('http://localhost:' + port)
 });

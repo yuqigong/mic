@@ -46,11 +46,11 @@ webpack({
                 }
             }
         }, {
-            test: /\.(css|sass|scss)$/,
+            test: /\.(sass|scss)$/,
             exclude: /node_modules/,
             use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                use: ['css-loader', 'sass-loader']
+                use: ['css-loader!sass-loader'],
+                fallback: 'style-loader'
             })
         }, {
             test: /\.(png|jpg|gif|svg)$/,
