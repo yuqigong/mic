@@ -28,6 +28,8 @@ import CellSwipe from '../example/cell-swipe.vue';
 import Search from '../example/search.vue';
 import LazyLoad from '../example/lazyload.vue';
 
+import Simple from '../integrate/simple.vue';
+
 
 const routes = [{
     path: '/',
@@ -145,6 +147,10 @@ const routes = [{
     path: '/lazyload',
     name: 'lazyload',
     component: LazyLoad
+}, {
+    path: '/simple',
+    name: 'simple',
+    component: Simple
 }];
 
 export default routes;
